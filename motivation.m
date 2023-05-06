@@ -6,7 +6,7 @@ clc
 LEN = 6000;
 mm = 1;
 noise = 0.1;
-for pr = [0.75 0.85 0.999]
+for pr = [0.75 0.85 0.95]
 vv = randn(1,LEN) * noise;
 v1=randn(1,LEN)*noise; v2=randn(1,LEN)*10;
 rp=rand(1,LEN);   
@@ -105,7 +105,7 @@ box on
 wid = 1;
 plot(EM_QIP(3,:),'r','LineWidth',4)
 plot(EQIP(3,:),'b','LineWidth',wid)
-h=legend('MMEE(\itPr=0.999)','Conventional MEE(\itPr=0.999)');
+h=legend('MMEE(\itPr=0.95)','Conventional MEE(\itPr=0.95)');
 set(h,'FontName','Times New Roman','FontSize',24,'FontWeight','normal');
 % set(gca,'fontsize',24);
 ylim([0.04,0.09])
